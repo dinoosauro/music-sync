@@ -7,7 +7,7 @@
 export default function OpenFile({ id, types }: SaveFilePicker) {
     return new Promise<File>(async (resolve, reject) => {
         if (window.showOpenFilePicker && localStorage.getItem("MusicSync-FileSystemAPI") !== "a") {
-            const handle = await window.showOpenFilePicker({ id: id, types: types });
+            const handle = await window.showOpenFilePicker({ id, types });
             resolve(await handle[0].getFile());
         } else {
             const input = document.createElement("input");

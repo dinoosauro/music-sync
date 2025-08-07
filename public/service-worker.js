@@ -8,7 +8,19 @@ const filestoCache = [
     "./icon.png",
     "./assets/index.css",
     "./assets/index.js",
-    "https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"
+    "./assets/AbstractID3Parser.js",
+    "./assets/AiffParser.js",
+    "./assets/core.js",
+    "./assets/DsdiffParser.js",
+    "./assets/DsfParser.js",
+    "./assets/FlacParser.js",
+    "./assets/MatroskaParser.js",
+    "./assets/MP4Parser.js",
+    "./assets/MpegParser.js",
+    "./assets/MusepackParser.js",
+    "./assets/OggParser.js",
+    "./assets/WaveParser.js",
+    "./assets/WavPackParser.js",
 ];
 self.addEventListener('install', e => {
     e.waitUntil(

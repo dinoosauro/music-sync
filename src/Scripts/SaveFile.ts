@@ -16,7 +16,7 @@ interface Props extends SaveFilePicker {
 export default async function SaveFile({ suggestedName, types, content, isImage }: Props) {
     try {
         if (localStorage.getItem("MusicSync-FileSystemAPI") === "a") throw new Error(); // Avoid using File System API if the user doesn't want it
-        let picker = await window.showSaveFilePicker({ id: `MusicSync-Export${isImage === 1 ? "Image" : isImage === 2 ? "Metadata" : "Lyrics"}`, suggestedName: suggestedName, types: types });
+        let picker = await window.showSaveFilePicker({ id: `MusicSync-Export${isImage === 1 ? "Image" : isImage === 2 ? "Metadata" : "Lyrics"}`, suggestedName, types });
         let write = await picker.createWritable();
         await write.write(content);
         await write.close();
